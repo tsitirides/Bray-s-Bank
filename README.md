@@ -13,8 +13,7 @@
 
 ## How to run program
 
-1. 
-- Build and install the frontend:
+1. Build and install the frontend:
 ```
 cd src/main/frontend 
 yarn install 
@@ -24,8 +23,7 @@ yarn start
 - Open your browser and enter the following URL: [http://localhost:3000/](http://localhost:3000/).
 - If the login page appears, stop the program and proceed to the next step.
 
-2. 
-- Return to the project root directory and enter in the terminal:
+2. Return to the project root directory and enter in the terminal:
 ```
 cd ../../..
 mvn clean install
