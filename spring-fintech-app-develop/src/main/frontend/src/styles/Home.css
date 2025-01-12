@@ -1,0 +1,79 @@
+#nav-s-synebank {
+    font-size: 3rem;
+    color:#FBFF91;
+}
+.navbar {
+    justify-content: space-between;
+}
+.nav-right {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+
+.grid-main {
+    padding-top: 2.5rem;
+}
+
+.grid-dashboard {
+    height: 14rem;
+}
+
+.flex-dashboard {
+    display: flex;
+    height: 100%;
+}
+
+.div-welcome {
+    font-size: 1.8vw;
+    font-weight: 600;
+    width: 45%;
+    height: 100%;
+    line-height: 220px;
+}
+
+.div-dashboardInfo {
+    width: 55%;
+    height: auto;
+    padding-top: 15px;
+    padding-left: 40px;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    position:relative;
+}
+
+.piggy-icon {
+    margin-top: 10px;
+    width: 180px;
+    height: 180px;
+    float: left;
+  }
+
+.text-dashboard {
+    float: left;
+    width: auto;
+    height: auto;
+    text-align: right;
+    font-size: 1.2vw;
+    font-weight: 600;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 40px;
+    right: 0;
+    position:absolute;
+}
+
+.btn-setup {
+    right: 0;
+    bottom: 0;
+    position:absolute;
+    padding-right: 40px;
+    padding-bottom: 45px;
+}
+
+  
+.grid-accounts {
+    height: 35rem;
+    background-color: #fcffd6;
+    border-radius: 25px;
+}

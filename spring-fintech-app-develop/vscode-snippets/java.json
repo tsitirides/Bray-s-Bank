@@ -1,0 +1,70 @@
+{
+	/*
+	This files allows for simplification of creating MVC like files.
+	The file is still a work in progress, and must remain updated with the teams personal java.json file (applicable for this project)
+	Steps to set up your own java.json snippet file below:
+	(1) Press Ctrl+Shift+P to open the Command Palette.
+	(2) Type snippets and select "Snippets: Configure Snippets"
+	(3) Scroll to find the java snippets, a java.json file should open like this one
+	(4) Copy paste the below snippets into your own java.json file
+	(5) Done! You can now use the keyword written within prefix to set up the file automatically
+	*/
+	
+	"Repository Interface": {
+	"prefix": "repository",
+	"body": [
+		"package com.seed3.synebankapp.repository;",
+		"",
+		"import org.springframework.data.jpa.repository.JpaRepository;",
+		"import com.seed3.synebankapp.model.${1:EntityName};",
+		"",
+		"/**",
+		" * Interface for ${1:EntityName} CRUD operations",
+		" */",
+		"public interface ${1:EntityName}Repository extends JpaRepository<${1:EntityName}, Integer> {",
+		"}"
+	],
+	"description": "Create a new repository interface"
+	},
+
+	"Service Class": {
+	"prefix": "service",
+	"body": [
+		"package com.seed3.synebankapp.service;",
+		"",
+		"import org.springframework.beans.factory.annotation.Autowired;",
+		"import org.springframework.stereotype.Service;",
+		"",
+		"import com.seed3.synebankapp.model.${1:EntityName};",
+		"import com.seed3.synebankapp.repository.${1:EntityName}Repository;",
+		"",
+		"@Service",
+		"public class ${1:EntityName}Service {",
+		"",
+		"    @Autowired",
+		"    private ${1:EntityName}Repository ${1:entityName}Repository;",
+		"",
+		"    public void create${1:EntityName}(${1:EntityName} ${1:entityName}) {",
+		"        ${1:entityName}Repository.save(${1:entityName});",
+		"    }",
+		"",
+		"    public ${1:EntityName} find${1:EntityName}ById(Integer id) {",
+		"        return ${1:entityName}Repository.findById(id).orElse(null);",
+		"    }",
+		"",
+		"    public List<${1:EntityName}> getAll${1:EntityName}s() {",
+		"        return ${1:entityName}Repository.findAll();",
+		"    }",
+		"",
+		"    public ${1:EntityName} update${1:EntityName}(${1:EntityName} ${1:entityName}) {",
+		"        return ${1:entityName}Repository.save(${1:entityName});",
+		"    }",
+		"",
+		"    public void delete${1:EntityName}(Integer id) {",
+		"        ${1:entityName}Repository.deleteById(id);",
+		"    }",
+		"}",
+	],
+	"description": "Create a new service class with basic CRUD operations"
+	}
+}

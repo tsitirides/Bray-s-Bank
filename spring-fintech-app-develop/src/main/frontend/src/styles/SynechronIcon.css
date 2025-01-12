@@ -1,0 +1,28 @@
+.st0 {
+    fill: #FFFFFF;
+}
+.st1 {
+    fill: #FAFD86;
+}
+
+.background-logo {
+    background-size:cover;
+    position: absolute; /* Position the icon absolutely */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    opacity: 0.2; 
+    z-index: 1; /* Set below the text */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    max-width: 100%; /* Constrain width to container */
+    max-height: 100%; /* Constrain height to container */
+}
+
+.top-logo {
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+    width: 5%;
+    z-index: 2; /* Ensure it's above the background logo */
+}
+
